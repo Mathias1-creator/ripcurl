@@ -11,14 +11,17 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Process from './pages/Process';
 
-// The real deploy uses clean URLs (/portfolio). The single-file preview build
-// is served from an arbitrary path, so it falls back to hash routing.
+// The real deploy uses clean URLs (/portfolio) at the domain root. The
+// single-file preview build is served from an arbitrary path, so it falls
+// back to hash routing. The GitHub Pages build is still clean URLs, but
+// served under /ripcurl/, so it needs a basename instead.
 const Router = import.meta.env.VITE_PREVIEW_BUILD ? HashRouter : BrowserRouter;
+const basename = import.meta.env.VITE_PREVIEW_BUILD ? undefined : import.meta.env.VITE_BASE_PATH;
 
 function App() {
   return (
     <QueryClientProvider client={queryClientInstance}>
-      <Router>
+      <Router basename={basename}>
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
