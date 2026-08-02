@@ -27,6 +27,11 @@ jobs:
       - run: npm ci
       - run: npm run build:pages
       - uses: actions/configure-pages@v5
+        with:
+          # Pages isn't turned on for this repo yet; this has the action
+          # enable it (Actions-driven source) instead of failing on the
+          # "Get Pages site" lookup.
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist-pages
