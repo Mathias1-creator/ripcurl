@@ -4,6 +4,7 @@ import ProjectSection from '../components/portfolio/ProjectSection';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import CreeksideGallery from '../components/portfolio/CreeksideGallery';
 import StraitsSideGallery from '../components/portfolio/StraitsSideGallery';
+import AvoDesignGallery from '../components/portfolio/AvoDesignGallery';
 
 const OTHER_PROJECTS = [
   {
@@ -152,6 +153,13 @@ export default function Portfolio() {
               />
             </div>
             <p className="text-xs font-body uppercase tracking-[2px] text-cream/30 mt-3 text-center">Client Mood Board — Design in Progress</p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.2}>
+            <div className="mt-16">
+              <p className="text-gold text-xs font-body uppercase tracking-[4px] mb-6">Design Plans</p>
+              <AvoDesignGallery />
+            </div>
           </ScrollReveal>
         </div>
       </section>
