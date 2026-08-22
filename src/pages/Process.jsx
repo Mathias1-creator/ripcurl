@@ -7,7 +7,7 @@ const STAGES = [
   {
     number: '01',
     title: 'Preliminary Design & Conceptualization',
-    price: 'Conceptual Design Plans — Starting at $1,000',
+    deliverable: 'Conceptual Design Plans',
     description:
       'The first stage is about translating your vision into a clear and functional design concept. We work together to understand your needs, analyse the site, and develop a comprehensive design direction that guides the entire project.',
     deliverables: [
@@ -20,7 +20,7 @@ const STAGES = [
   {
     number: '02',
     title: 'Detailed Design & Final Master Plan',
-    price: 'Final Build-Ready Documents — $3,000–$5,000',
+    deliverable: 'Final Build-Ready Documents',
     description:
       'Building upon the approved preliminary design, this stage finalises all the details necessary for professional installation and contractor bidding.',
     deliverables: [
@@ -55,7 +55,7 @@ export default function Process() {
                       {stage.title}
                     </h2>
                     <div className="inline-block bg-forest text-cream font-body text-lg px-5 py-2 mb-2">
-                      {stage.price}
+                      {stage.deliverable}
                     </div>
                   </div>
 
@@ -76,13 +76,17 @@ export default function Process() {
             ))}
           </div>
 
-          {/* Total Investment */}
+          {/* Investment */}
           <ScrollReveal delay={0.3}>
             <div className="mt-20 border-t border-charcoal/10 pt-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-              <div>
-                <p className="text-gold text-xs font-body uppercase tracking-[4px] mb-2">Total Investment</p>
-                <p className="font-heading text-3xl lg:text-4xl text-charcoal leading-snug">Conceptual Design Plans — Starting at $1,000</p>
-                <p className="font-heading text-3xl lg:text-4xl text-charcoal leading-snug mt-1">Final Build-Ready Documents — $3,000–$5,000</p>
+              <div className="max-w-xl">
+                <p className="text-gold text-xs font-body uppercase tracking-[4px] mb-2">Investment</p>
+                <p className="font-heading text-3xl lg:text-4xl text-charcoal leading-snug">
+                  Every property is different — pricing is tailored to your site, its scope, and the level of detail your project calls for.
+                </p>
+                <p className="font-body text-charcoal/60 text-sm mt-5">
+                  Tell us about your property and we'll put together a quote.
+                </p>
               </div>
               <Link
                 to="/contact"
