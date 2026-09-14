@@ -65,8 +65,12 @@ export default function Footer() {
                 <MapPin size={16} className="text-gold flex-shrink-0" />
                 38 Rip Curl Place, Goleta, CA
               </div>
-              <p className="text-cream/70 text-sm font-body pl-7">CA Contractors License #1153391</p>
-
+              {/* Licences read as one credentials block, so they sit tighter
+                  together than the contact rows above. */}
+              <div className="pl-7 space-y-1 text-cream/70">
+                <p>CA Contractors License #1153391</p>
+                <p>WA Business License (UBI) #606268358</p>
+              </div>
             </div>
           </div>
         </div>
